@@ -1,6 +1,4 @@
-# xhs-tests-runnable-v3（更像线上产品·小红书风）
-
-这是一个**纯静态** Demo：解压后双击 `index.html` 即可运行（无需服务器、无需 npm）。
+# xhs-tests-runnable-v3
 
 ## 线上产品感升级点
 - ✅ 一题一页 & 选完自动下一题
