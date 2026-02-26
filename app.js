@@ -1312,7 +1312,10 @@
   function radarSVG(dimList, values, size=240){
     // dimList: [{code, label}]
     // values: map code -> 0..100
-    const cx = size/2, cy = size/2;
+    // use padded viewBox to avoid clipping outer labels on small screens
+    const pad = Math.max(20, Math.round(size * 0.10));
+    const canvas = size + pad * 2;
+    const cx = canvas / 2, cy = canvas / 2;
     const r = size * 0.40;
     const n = dimList.length;
 
@@ -1353,7 +1356,7 @@
     `;
 
     return `
-      <svg class="radar-svg" viewBox="0 0 ${size} ${size}" role="img" aria-label="维度雷达图" preserveAspectRatio="xMidYMid meet">
+      <svg class="radar-svg" viewBox="0 0 ${canvas} ${canvas}" role="img" aria-label="维度雷达图" preserveAspectRatio="xMidYMid meet">
         ${rings}
         ${axes}
         ${poly}
