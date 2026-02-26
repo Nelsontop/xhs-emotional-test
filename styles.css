@@ -1,0 +1,272 @@
+:root {
+  --bg: #f6f7ff;
+  --card: #ffffffcc;
+  --text: #1d2040;
+  --muted: #666d96;
+  --primary: #ff5d8f;
+  --primary-2: #7a6bff;
+  --ok: #2dca9f;
+  --shadow: 0 24px 60px rgba(66, 66, 140, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Noto Sans SC", sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, #f6f8ff 0%, #fff6fb 100%);
+}
+
+.bg-blur {
+  position: fixed;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  z-index: -1;
+}
+
+.bg-blur-a {
+  top: -50px;
+  left: -60px;
+  background: #ff8fb6;
+}
+
+.bg-blur-b {
+  right: -80px;
+  bottom: -70px;
+  background: #8c84ff;
+}
+
+.app-shell,
+.report-shell {
+  width: min(900px, 92vw);
+  margin: 48px auto;
+}
+
+.hero-card,
+.quiz-card,
+.report-card,
+.panel-card {
+  background: var(--card);
+  backdrop-filter: blur(8px);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid #ffffffa8;
+}
+
+.hero-card,
+.quiz-card {
+  padding: clamp(22px, 4vw, 44px);
+}
+
+.badge {
+  display: inline-flex;
+  margin: 0;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--primary-2);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 16px 0 12px;
+  line-height: 1.2;
+}
+
+.hero-copy {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+input {
+  flex: 1;
+  min-width: 220px;
+  border: 1px solid #e6e8ff;
+  border-radius: 14px;
+  padding: 13px 14px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.primary-btn,
+.secondary-btn,
+.option-btn {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.primary-btn {
+  background: linear-gradient(100deg, var(--primary), var(--primary-2));
+  color: white;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.quiz-topbar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+#questionTag {
+  margin: 0;
+  font-weight: 700;
+  color: var(--primary-2);
+}
+
+.progress-track {
+  flex: 1;
+  height: 10px;
+  background: #ecefff;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff80ae, #7f75ff);
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+h2 {
+  margin: 24px 0;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.45;
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.option-btn {
+  text-align: left;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #e4e7ff;
+  background: white;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #2a2d53;
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+
+.option-btn:hover {
+  transform: translateY(-2px);
+  border-color: #aba4ff;
+}
+
+.hidden {
+  display: none;
+}
+
+.report-card {
+  padding: clamp(20px, 3vw, 36px);
+  margin-bottom: 18px;
+}
+
+.report-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: center;
+}
+
+.type-chip {
+  font-weight: 800;
+  color: var(--primary-2);
+  background: #f2f0ff;
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.panel-card {
+  padding: 20px;
+}
+
+.panel-card h3 {
+  margin-top: 0;
+}
+
+.metric {
+  margin-bottom: 12px;
+}
+
+.metric-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.metric-track {
+  height: 10px;
+  border-radius: 999px;
+  background: #eff1ff;
+  overflow: hidden;
+}
+
+.metric-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #54d8ff, #6f68ff);
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #f7f8ff;
+  color: #5d6498;
+  border: 1px solid #e8eaff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.secondary-btn {
+  margin-top: 14px;
+  background: #edf0ff;
+  color: #3e4170;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .option-grid,
+  .panel-grid {
+    grid-template-columns: 1fr;
+  }
+}

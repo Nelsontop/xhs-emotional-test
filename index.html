@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Persona Lab | 宠物性格测试</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-blur bg-blur-a"></div>
+    <div class="bg-blur bg-blur-b"></div>
+
+    <main class="app-shell">
+      <section class="hero-card" id="introCard">
+        <p class="badge">Pet Persona Lab</p>
+        <h1>测测你是哪种宠物人格女孩 🐾</h1>
+        <p class="hero-copy">
+          16道趣味场景题，60秒找到你的宠物系性格：是社交修勾、优雅猫咪，还是治愈水豚？
+          完成后可获得专业风格报告与关系建议。
+        </p>
+        <div class="intro-actions">
+          <input id="userName" type="text" maxlength="20" placeholder="先告诉我你的昵称（可选）" />
+          <button id="startBtn" class="primary-btn">开始测试</button>
+        </div>
+      </section>
+
+      <section class="quiz-card hidden" id="quizCard">
+        <div class="quiz-topbar">
+          <p id="questionTag">Q1 / 16</p>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <h2 id="questionText"></h2>
+
+        <div class="option-grid">
+          <button id="optionA" class="option-btn"></button>
+          <button id="optionB" class="option-btn"></button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
