@@ -1383,8 +1383,6 @@
       ]) : null
     ]));
 
-    g.appendChild(intro);
-
     g.appendChild(testCard("relationship"));
     g.appendChild(testCard("emotional"));
 
