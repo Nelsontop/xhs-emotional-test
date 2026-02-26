@@ -715,7 +715,7 @@
     ctx.fillStyle = s.color || "rgba(0,0,0,0.60)";
     // baseline
     const textY = y + Math.floor(h * 0.70);
-    ctx.fillText(text, x + padX, textY);
+    ctx.fillText("", x + padX, textY);
     ctx.restore();
     return { w, h };
   }
