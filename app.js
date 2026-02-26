@@ -1353,7 +1353,7 @@
     `;
 
     return `
-      <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" role="img" aria-label="维度雷达图">
+      <svg class="radar-svg" viewBox="0 0 ${size} ${size}" role="img" aria-label="维度雷达图" preserveAspectRatio="xMidYMid meet">
         ${rings}
         ${axes}
         ${poly}
@@ -1726,12 +1726,12 @@
       ]),
       el("div", {class:"section"}, [
         el("h3", {}, "维度概览（更像线上产品的可视化）"),
-        el("div", {class:"grid", style:"grid-template-columns: repeat(12, 1fr); gap: 12px; align-items: start;"}, [
-          el("div", {class:"chart-wrap", style:"grid-column: span 5;"}, [
+        el("div", {class:"grid result-overview-grid"}, [
+          el("div", {class:"chart-wrap result-overview-radar"}, [
             el("div", {class:"chart-title"}, "安全感雷达图（0-100）"),
             el("div", {html: radar})
           ]),
-          el("div", {class:"chart-wrap", style:"grid-column: span 7;"}, [
+          el("div", {class:"chart-wrap result-overview-text"}, [
             el("div", {class:"chart-title"}, "你最强的 3 个“安全感证据”"),
             el("ul", {class:"list"}, top3.map(x => el("li", {}, x))),
             el("div", {class:"notice"}, [

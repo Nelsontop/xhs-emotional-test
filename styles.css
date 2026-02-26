@@ -355,6 +355,30 @@ a{ color:inherit; }
   color: var(--muted);
 }
 
+
+.radar-svg{
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.result-overview-grid{
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+.result-overview-radar{ grid-column: span 5; }
+.result-overview-text{ grid-column: span 7; }
+
+@media (max-width: 860px){
+  .result-overview-radar,
+  .result-overview-text{ grid-column: span 12; }
+
+  .result-overview-text{ margin-top: 2px; }
+}
+
 /* Poster */
 .poster{
   padding: 16px;
